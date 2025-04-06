@@ -1,0 +1,190 @@
+{
+    "info": {
+      "_postman_id": "ec2a45df-6c8a-4c88-b7e9-2b5d94a5e7f1",
+      "name": "API REST Estudiantes SQLite",
+      "description": "Colección para probar la API REST de estudiantes implementada con Node.js y SQLite3",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Obtener todos los estudiantes",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8000/students",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "students"
+            ]
+          },
+          "description": "Obtiene la lista completa de todos los estudiantes registrados en la base de datos"
+        },
+        "response": []
+      },
+      {
+        "name": "Crear nuevo estudiante",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"firstname\": \"Carlos\",\n    \"lastname\": \"Rodríguez\",\n    \"gender\": \"Masculino\",\n    \"age\": \"25\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/students",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "students"
+            ]
+          },
+          "description": "Crea un nuevo estudiante con los datos proporcionados"
+        },
+        "response": []
+      },
+      {
+        "name": "Obtener estudiante por ID",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8000/student/1",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "student",
+              "1"
+            ]
+          },
+          "description": "Obtiene un estudiante específico mediante su ID"
+        },
+        "response": []
+      },
+      {
+        "name": "Actualizar estudiante",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"firstname\": \"Carlos\",\n    \"lastname\": \"Rodríguez Actualizado\",\n    \"gender\": \"Masculino\",\n    \"age\": \"26\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/student/1",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "student",
+              "1"
+            ]
+          },
+          "description": "Actualiza los datos de un estudiante específico mediante su ID"
+        },
+        "response": []
+      },
+      {
+        "name": "Eliminar estudiante",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8000/student/1",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "student",
+              "1"
+            ]
+          },
+          "description": "Elimina un estudiante específico mediante su ID"
+        },
+        "response": []
+      },
+      {
+        "name": "Crear múltiples estudiantes (prueba)",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"firstname\": \"Ana\",\n    \"lastname\": \"Martínez\",\n    \"gender\": \"Femenino\",\n    \"age\": \"21\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/students",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "8000",
+            "path": [
+              "students"
+            ]
+          },
+          "description": "Crea otro estudiante para pruebas"
+        },
+        "response": []
+      }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ]
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ]
+        }
+      }
+    ],
+    "variable": [
+      {
+        "key": "base_url",
+        "value": "http://localhost:8000",
+        "type": "string"
+      }
+    ]
+  }
